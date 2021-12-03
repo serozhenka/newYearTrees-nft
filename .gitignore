@@ -1,2 +1,3 @@
 ### Custom .gitignore ###
 .idea
+"_site"
