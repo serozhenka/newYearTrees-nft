@@ -6,25 +6,25 @@ $(window).on("load", function() {
 $(document).ready(function() {
     $(".hamburger").on("click", function() {
         $(".toogle-block").fadeToggle(800)
-        $("html, body").toggleClass("over")
+        $("html, body").toggleClass("overflow-hidden")
 
         let hamburger = $(".hamburger")
         let image = $(".hamburger img")
 
         if (hamburger.hasClass("hamburger-cross")) {
             hamburger.removeClass("hamburger-cross")
-            image.fadeOut(1000)
+            image.fadeOut(400)
             setTimeout(function(){
                  image.attr("src", "images/cross.png")
-            },1000);
-            image.fadeIn(1000)
+            },400);
+            image.fadeIn(400)
         } else {
             hamburger.addClass("hamburger-cross")
-            image.fadeOut(1000)
+            image.fadeOut(400)
             setTimeout(function(){
                  image.attr("src", "images/hamburger.png")
-            },1000);
-            image.fadeIn(1000)
+            },400);
+            image.fadeIn(400)
         }
 
 
