@@ -15,6 +15,7 @@
      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Outfit:wght@100;400;900&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.sass">
 </head>
 <body>
 <!--    <div class="loading-screen">-->
@@ -57,7 +58,45 @@
         </div>
 
         <div class="main-block-content">
-            <h1 style="color:white;">asdf</h1>
+            <div class="main-block-content-text">
+                <div id="main">Welcome to NewYearTrees NFTs</div>
+                <div id="submain">The future of NFT trees</div>
+                <div id="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                            <defs>
+                                <filter id="gooey">
+                                    <!-- in="sourceGraphic" -->
+                                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                                    <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                                </filter>
+                            </defs>
+                        </svg>
+
+                        <button id="gooey-button">
+                            Join discord
+                            <span class="bubbles">
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                                <span class="bubble"></span>
+                            </span>
+                        </button>
+                </div>
+            </div>
+            <div class="main-block-content-image">
+                <img src="images/main_image.png" alt="">
+            </div>
+<!--            <div class="main-block-content-mint">-->
+
+<!--            </div>-->
+
         </div>
 
     </div>
