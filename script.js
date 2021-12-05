@@ -26,7 +26,23 @@ $(document).ready(function() {
             },400);
             image.fadeIn(400)
         }
-
-
     })
+
+    window.onscroll = function() {
+        let windowScroll = document.body.scrollTop || document.documentElement.scrollTop + window.innerHeight
+            - ($('.main-block')[0].scrollHeight + $('.about')[0].scrollHeight + $('#roadmapHeader')[0].scrollHeight + 250);
+
+        let blockHeight = $('#roadmapItems')[0].scrollHeight
+        let scrolled = (windowScroll / blockHeight) * 100;
+
+
+        if (scrolled >= 0 && scrolled <= 100) {
+            document.getElementById("progressBar").style.height = scrolled + "%";
+        }  else if(scrolled < 0) {
+            document.getElementById("progressBar").style.height = 0 + "%";
+        } else if(scrolled > 100) {
+            document.getElementById("progressBar").style.height = 100 + "%";
+        }
+
+    };
 })

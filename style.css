@@ -54,12 +54,13 @@
     height: 7vh;
     color: white;
     display: flex;
-    background-color: rgba(5, 1, 10, 0.5);
+    background-color: rgba(6, 2, 13, 1);
     font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
     justify-content: space-between;
     align-items: center;
     font-size: 18px;
+    z-index: 999;
 }
 
 .navbar div {
@@ -195,12 +196,12 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 
 .about-header {
-    padding-top: 35px;
+    padding-top: 40px;
     padding-bottom: 35px;
     flex-basis: 100%;
     height: 7vh;
@@ -519,6 +520,70 @@ svg {
     }
 }
 
+.roadmap {
+    width: 100%;
+    background-color: rgba(8, 4, 18, 1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.roadmap-items {
+    flex-basis: 50%;
+}
+
+.roadmap-block {
+    margin-bottom: 70px;
+}
+
+.roadmap-block div {
+    margin-left: 2%;
+    margin-top: 15px;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.4vw;
+    letter-spacing: calc(0.5px);
+    filter: drop-shadow(2px 2px 15px #482064);
+    line-height: 1.7;
+    padding-right: 10px;
+}
+
+.roadmap-block h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 2vw;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 2s linear infinite;
+    filter: drop-shadow(2px 2px 2px #482064);
+}
+
+#roadmapHeader {
+    padding-bottom: 70px;
+}
+
+.progress-container {
+    flex-basis: 1%;
+    background-color: rgba(91, 44, 111, 0.2);
+    border-radius: 15px;
+    margin-bottom: 5%;
+}
+
+.progress-bar {
+
+background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
+
+    width: 100%;
+    height: 0%;
+    border-radius: 15px;
+}
+
 
 /* MEDIA QUERY*/
 
@@ -588,7 +653,17 @@ svg {
         margin-top: 10px;
     }
 
+    .roadmap-items {
+        flex-basis: 60%;
+    }
 
+    .roadmap-block div {
+        font-size: 1.6vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 2.3vw;
+    }
 }
 
 @media(max-width: 1150px) {
@@ -689,6 +764,17 @@ svg {
         transform: translateX(-50%) scale(0.6);
     }
 
+    .roadmap-items {
+        flex-basis: 70%;
+    }
+
+    .roadmap-block div {
+        font-size: 1.8vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 2.7vw;
+    }
 
 }
 
@@ -703,6 +789,24 @@ svg {
 
     .main-block-content-image img{
         width: 60%;
+    }
+
+    .progress-container {
+        margin-bottom: 7%;
+    }
+}
+
+@media(max-width: 700px) {
+    .roadmap-items {
+        flex-basis: 80%;
+    }
+
+    .roadmap-block div {
+        font-size: 2vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 3vw;
     }
 }
 
@@ -722,6 +826,14 @@ svg {
     #gooey-button {
         font-size: 1.5rem;
     }
+
+    .roadmap-block div {
+        font-size: 2.2vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 3.3vw;
+    }
 }
 
 @media(max-width: 500px) {
@@ -735,6 +847,26 @@ svg {
 
     .main-block-content-image img{
         width: 95%;
+    }
+
+    .roadmap-block div {
+        font-size: 2.5vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 3.75vw;
+    }
+
+    .roadmap-block {
+        margin-bottom: 40px;
+    }
+
+    .roadmap-block {
+        margin-bottom: 40px;
+    }
+
+    #roadmapHeader {
+        padding-bottom: 40px;
     }
 }
 
