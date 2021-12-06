@@ -142,6 +142,7 @@
 }
 
 .main-block-content-text {
+    display: inline;
     flex-basis: 50%;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
