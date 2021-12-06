@@ -15,13 +15,12 @@
     position: absolute;
     width: 100%;
     height: 100vh;
-    background-color: #020D19;
+    background-color: #080B0F;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
     font-size: 30px;
     z-index: 10000;
@@ -43,20 +42,19 @@
     background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("images/background.gif");
     background-size: cover;
     background-position: center;
+    display: flex;
+    justify-content: center;
+
 }
 
 .navbar {
     position: fixed;
-    /*top: 0;*/
-    /*left: 0;*/
-    /*bottom: 0;*/
     width: 100%;
     padding: 7px 0;
     height: 7vh;
     color: white;
     display: flex;
     background-color: rgba(6, 2, 13, 1);
-    font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
     justify-content: space-between;
     align-items: center;
@@ -72,7 +70,7 @@
 }
 
 .item a {
-    color: white;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -85,12 +83,11 @@
 .logo {
     font-size: 23px;
     font-weight: 600;
-    text-shadow: 0 0 10px white;
+    text-shadow: 0 0 10px #fff;
 }
 
 .toogle-block {
     position: fixed;
-    /*position: absolute;*/
     top: 0;
     left: 0;
     width: 100%;
@@ -112,8 +109,7 @@
     flex-direction: column;
     height:80%;
     width: 100%;
-    color: white;
-    font-family: 'Outfit', sans-serif;
+    color: #fff;
     font-family: 'Quicksand', sans-serif;
 }
 
@@ -132,18 +128,17 @@
 }
 
 .main-block-content {
-    width: 100%;
-    padding-top: calc(17px + 7vh);
+    flex-basis: 80%;
     height: calc(100vh - 17px - 7vh);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: calc(17px + 7vh);
 }
 
 .main-block-content-text {
-    flex-basis: 40%;
-    color: white;
+    flex-basis: 50%;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
     background-color: #4158D0;
@@ -156,13 +151,13 @@
 }
 
 .main-block-content-text #main {
-    font-size: 60px;
+    font-size: 4vw;
     margin-bottom: 20px;
     line-height: 1.1;
 }
 
 .main-block-content-text #submain {
-    font-size: 25px;
+    font-size: 2vw;
     font-style: italic;
     background-color: #3EECAC;
     background-image: linear-gradient(19deg, #3EECAC 0%, #EE74E1 100%);
@@ -176,20 +171,156 @@
 
 
 .main-block-content-image {
-    flex-basis: 40%;
+    flex-basis: 50%;
+    box-shadow: black;
 }
 
 .main-block-content-image img{
     display: block;
-    margin: auto;
-    width: 80%;
-    filter: drop-shadow(3px 3px 1px rgba(195, 155, 211, 0.3));
+    margin-left: auto;
+    width: 23vw;
+    border-radius: 2px;
+    filter: drop-shadow(0px 0px 5px rgba(195, 155, 211, 0.3));
 }
 
-.main-block-content-mint {
-    flex-basis: 80%;
+
+#button {
+    align-self: start;
 }
 
+svg {
+    position: absolute;
+    top: -4000px;
+    left: -4000px;
+}
+
+#gooey-button {
+    font-style: italic;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    transform: scale(0.7);
+    padding: 1rem 3rem;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10px;
+    color: #C39BD3;
+    text-shadow: 1px 1px 2px #482064;
+    filter: url("#gooey");
+    position: relative;
+    background-color: #A170B5;
+    transition: .5s;
+}
+
+#gooey-button:focus {
+    outline: none;
+}
+
+#gooey-button .bubbles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+#gooey-button .bubbles .bubble {
+    background-color: #A170B5;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+    transition: .5s;
+}
+
+#gooey-button:hover {
+    background-color: #C39BD3;
+    color: #9A67AF;
+}
+
+#gooey-button:hover .bubbles .bubble {
+    background-color: #C39BD3;
+}
+
+#gooey-button .bubbles .bubble:nth-child(1) {
+    left: 72px;
+    width: 25px;
+    height: 25px;
+    animation: move-1 3.02s infinite;
+    animation-delay: 0.2s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(2) {
+    left: 72px;
+    width: 25px;
+    height: 25px;
+    animation: move-2 3.04s infinite;
+    animation-delay: 0.4s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(3) {
+    left: 50px;
+    width: 25px;
+    height: 25px;
+    animation: move-3 3.06s infinite;
+    animation-delay: 0.6s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(4) {
+    left: 77px;
+    width: 25px;
+    height: 25px;
+    animation: move-4 3.08s infinite;
+    animation-delay: 0.8s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(5) {
+    left: 98px;
+    width: 25px;
+    height: 25px;
+    animation: move-5 3.1s infinite;
+    animation-delay: 1s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(6) {
+    left: 85px;
+    width: 25px;
+    height: 25px;
+    animation: move-6 3.12s infinite;
+    animation-delay: 1.2s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(7) {
+    left: 22px;
+    width: 25px;
+    height: 25px;
+    animation: move-7 3.14s infinite;
+    animation-delay: 1.4s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(8) {
+    left: 91px;
+    width: 25px;
+    height: 25px;
+    animation: move-8 3.16s infinite;
+    animation-delay: 1.6s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(9) {
+    left: 72px;
+    width: 25px;
+    height: 25px;
+    animation: move-9 3.18s infinite;
+    animation-delay: 1.8s;
+}
+
+#gooey-button .bubbles .bubble:nth-child(10) {
+    left: 100px;
+    width: 25px;
+    height: 25px;
+    animation: move-10 3.2s infinite;
+    animation-delay: 2s;
+}
 
 
 /* ABOUT */
@@ -217,7 +348,7 @@
     text-align: center;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
-    font-size: 2.7vw;
+    font-size: 3vw;
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
     background-size: 200% auto;
@@ -233,10 +364,8 @@
     align-items: center;
     flex-basis: 40%;
     color: white;
-    /*height: calc(90vh - 35px - 7vh);*/
-    font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
-    font-size: 20px;
+    font-size: 1.3vw;
     letter-spacing: calc(0.5px);
     filter: drop-shadow(2px 2px 15px #482064);
 }
@@ -250,12 +379,12 @@
     width: 70%;
     height: auto;
     display: block;
-    margin: auto;
+    margin-left: auto;
 }
 
 @keyframes gradient {
     0% {
-        background-position: 0% center;
+        background-position: 0 center;
     }
 
     50% {
@@ -263,285 +392,19 @@
     }
 
     100% {
-      background-position: 0% center;
+      background-position: 0 center;
     }
 }
 
-
-#button {
-    margin-top: 45px;
-}
-
-svg {
-    position: absolute;
-    top: -4000px;
-    left: -4000px;
-}
-
-#gooey-button {
-    left: -40px;
-    font-style: italic;
-    font-family: 'Outfit', sans-serif;
-    font-weight: 600;
-    transform: scale(0.7);
-    padding: 1rem 3rem;
-    font-size: 2rem;
-    border: none;
-    border-radius: 10px;
-    filter: url("#gooey");
-    position: relative;
-    background-color: #A170B5;
-    transition: .5s;
-}
-
-#gooey-button a{
-    color: #C39BD3;
-    text-shadow: 1px 1px 2px #482064;
-    text-decoration: none;
-    width: 100%;
-}
-
-#gooey-button:focus {
-    outline: none;
-}
-#gooey-button .bubbles {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-#gooey-button .bubbles .bubble {
-    background-color: #A170B5;
-    border-radius: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: -1;
-    transition: .5s;
-}
-
-#gooey-button:hover {
-    background-color: #C39BD3;
-}
-
-#gooey-button:hover a {
-    color: #9A67AF;
-}
-
-#gooey-button:hover .bubbles .bubble {
-    background-color: #C39BD3;
-}
-
-#gooey-button .bubbles .bubble:nth-child(1) {
-    left: 72px;
-    width: 25px;
-    height: 25px;
-    animation: move-1 3.02s infinite;
-    animation-delay: 0.2s;
-}
-#gooey-button .bubbles .bubble:nth-child(2) {
-    left: 72px;
-    width: 25px;
-    height: 25px;
-    animation: move-2 3.04s infinite;
-    animation-delay: 0.4s;
-}
-#gooey-button .bubbles .bubble:nth-child(3) {
-    left: 50px;
-    width: 25px;
-    height: 25px;
-    animation: move-3 3.06s infinite;
-    animation-delay: 0.6s;
-}
-#gooey-button .bubbles .bubble:nth-child(4) {
-    left: 77px;
-    width: 25px;
-    height: 25px;
-    animation: move-4 3.08s infinite;
-    animation-delay: 0.8s;
-}
-#gooey-button .bubbles .bubble:nth-child(5) {
-    left: 98px;
-    width: 25px;
-    height: 25px;
-    animation: move-5 3.1s infinite;
-    animation-delay: 1s;
-}
-#gooey-button .bubbles .bubble:nth-child(6) {
-    left: 85px;
-    width: 25px;
-    height: 25px;
-    animation: move-6 3.12s infinite;
-    animation-delay: 1.2s;
-}
-#gooey-button .bubbles .bubble:nth-child(7) {
-    left: 22px;
-    width: 25px;
-    height: 25px;
-    animation: move-7 3.14s infinite;
-    animation-delay: 1.4s;
-}
-#gooey-button .bubbles .bubble:nth-child(8) {
-    left: 91px;
-    width: 25px;
-    height: 25px;
-    animation: move-8 3.16s infinite;
-    animation-delay: 1.6s;
-}
-#gooey-button .bubbles .bubble:nth-child(9) {
-    left: 72px;
-    width: 25px;
-    height: 25px;
-    animation: move-9 3.18s infinite;
-    animation-delay: 1.8s;
-}
-#gooey-button .bubbles .bubble:nth-child(10) {
-    left: 100px;
-    width: 25px;
-    height: 25px;
-    animation: move-10 3.2s infinite;
-    animation-delay: 2s;
-}
-
-@keyframes move-1 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -117px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-2 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -93px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-3 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -107px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-4 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -81px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-5 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -116px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-6 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -51px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-7 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -70px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-8 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -73px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-9 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -127px);
-    }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
-
-@keyframes move-10 {
-    0% {
-        transform: translate(0, 0);
-    }
-    99% {
-        transform: translate(0, -123px); }
-    100% {
-        transform: translate(0, 0);
-        opacity: 0;
-    }
-}
 
 .roadmap {
     width: 100%;
-    background-color: rgba(8, 4, 18, 1);
+    background-color: #0B0212;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 50px;
-    padding-top: 40px;
+    padding-bottom: 5%;
+    padding-top: 2%;
 }
 
 .roadmap-items {
@@ -549,14 +412,13 @@ svg {
 }
 
 .roadmap-block {
-    margin-bottom: 70px;
+    margin-bottom: 10%;
 }
 
 .roadmap-block div {
     margin-left: 2%;
     margin-top: 15px;
     color: white;
-    font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.4vw;
     letter-spacing: calc(0.5px);
@@ -598,7 +460,7 @@ svg {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding-bottom: 3vw;
+    padding-bottom: 6vw;
     padding-top: 3vw;
 }
 
@@ -635,7 +497,7 @@ svg {
     align-items: center;
     flex-wrap: wrap;
     color: white;
-    padding: 2%;
+    padding: 3%;
 }
 
 .faq-block .faq-block-header {
@@ -670,9 +532,8 @@ svg {
 
 
 .faq-block-hidden {
-    padding: 15px 0;
+    padding: 2% 0 0 0;
     color: white;
-    font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2vw;
     letter-spacing: calc(0.5px);
@@ -696,7 +557,6 @@ svg {
 .footer div {
     padding: 15px 0;
     color: white;
-    font-family: 'Outfit', sans-serif;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.2vw;
     letter-spacing: calc(0.5px);
@@ -705,6 +565,115 @@ svg {
 
 /* MEDIA QUERY*/
 
+@media(min-width: 800px) {
+    .toogle-block {
+        display: none;
+    }
+}
+
+@media(max-width: 1450px) {
+    .main-block-content-text #main {
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 1300px) {
+
+    .roadmap-items {
+        flex-basis: 60%;
+    }
+
+    .roadmap-block div {
+        font-size: 1.6vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 2.3vw;
+    }
+}
+
+@media(max-width: 1200px) {
+    .main-block-content-text #main {
+        font-size: 3.7vw;
+    }
+
+    .main-block-content-text #submain {
+        font-size: 1.9vw;
+    }
+
+    .main-block-content-image img{
+        width: 28vw;
+    }
+}
+
+
+@media(max-width: 1100px) {
+    .about-image {
+        flex-basis: 80%;
+    }
+
+    .about-text {
+        text-align: justify;
+        flex-basis: 70%;
+        margin-bottom: 35px;
+        font-size: 1.7vw;
+    }
+
+    .about-image img {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media(max-width: 900px) {
+    .main-block-content-text {
+        flex-basis: 80%;
+        align-self: end;
+    }
+
+    .main-block-content-image {
+        flex-basis: 70%;
+    }
+
+    .main-block-content-text #main {
+        font-size: 4vw;
+    }
+
+    .main-block-content-text #submain {
+        font-size: 2vw;
+    }
+
+    #button {
+        align-self: start;
+    }
+
+    .main-block-content-image img{
+        width: 40vw;
+        margin: auto;
+    }
+
+    .main-block-content-text #main {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .main-block-content-text #submain {
+        text-align: center;
+    }
+
+    .roadmap-items {
+        flex-basis: 70%;
+    }
+
+    .roadmap-block div {
+        font-size: 1.8vw;
+    }
+
+    .roadmap-block h3 {
+        font-size: 2.7vw;
+    }
+
+}
 
 @media(max-width: 800px) {
     .navbar-hide {
@@ -727,183 +696,15 @@ svg {
         flex-grow: 1;
     }
 
-    .logo {
-        font-size: 20px;
-    }
-
-}
-
-@media(min-width: 800px) {
-    .toogle-block {
-        display: none;
-    }
-}
-
-@media(max-width: 1450px) {
     .about-text {
-        font-size: 18px;
+        font-size: 2.2vw;
     }
 
-    .main-block-content-text #main {
-        font-size: 50px;
-    }
-}
-
-@media(max-width: 1300px) {
-    .about-text {
-        font-size: 16px;
-    }
-
-    .main-block-content-text #main {
-        font-size: 45px;
-    }
-
-    .main-block-content-text #submain {
-        font-size: 20px;
-    }
-
-    #gooey-button {
-        left: -70px;
-        transform: scale(0.5);
-    }
-
-    #button {
-        margin-top: 10px;
-    }
-
-    .roadmap-items {
-        flex-basis: 60%;
-    }
-
-    .roadmap-block div {
-        font-size: 1.6vw;
-    }
-
-    .roadmap-block h3 {
-        font-size: 2.3vw;
-    }
-}
-
-@media(max-width: 1150px) {
-    .about-text {
-        font-size: 15px;
-    }
-}
-
-@media(max-width: 1100px) {
-    .about-image {
-        flex-basis: 80%;
-    }
-
-    .about-text {
-        text-align: justify;
-        flex-basis: 80%;
-        font-size: 18px;
-        margin-bottom: 35px;
+    .about-header h1 {
+        font-size: 4.5vw;
     }
 
     .about-image img {
-        width: 40%;
-    }
-
-    .main-block-content-text #main {
-        font-size: 40px;
-    }
-
-    .main-block-content-text #submain {
-        font-size: 20px;
-    }
-
-    #gooey-button {
-        left: -70px;
-        transform: scale(0.5);
-    }
-
-    #button {
-        margin-top: 10px;
-    }
-
-    .main-block-content-image img{
-        width: 90%;
-    }
-
-
-}
-
-@media(max-width: 1000px) {
-    .main-block-content-text #main {
-        font-size: 35px;
-    }
-
-    .main-block-content-text #submain {
-        font-size: 18px;
-    }
-
-    .main-block-content-image img{
-        width: 100%;
-    }
-
-    #gooey-button {
-        left: -75px;
-        transform: scale(0.45);
-    }
-
-    #button {
-        margin-top: 20px;
-    }
-}
-
-@media(max-width: 900px) {
-    .main-block-content-text {
-        flex-basis: 60%;
-    }
-
-    .main-block-content-image {
-        flex-basis: 75%;
-    }
-
-    .main-block-content-image img{
-        width: 70%;
-    }
-
-    .main-block-content-text #main {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-
-    .main-block-content-text #submain {
-        text-align: center;
-    }
-
-    #gooey-button {
-        left: 50%;
-        transform: translateX(-50%) scale(0.6);
-    }
-
-    .roadmap-items {
-        flex-basis: 70%;
-    }
-
-    .roadmap-block div {
-        font-size: 1.8vw;
-    }
-
-    .roadmap-block h3 {
-        font-size: 2.7vw;
-    }
-
-}
-
-@media(max-width: 800px) {
-    .about-image img {
-        width: 60%;
-    }
-
-    .about-text {
-        font-size: 14px;
-    }
-
-    .main-block-content-image img{
         width: 60%;
     }
 
@@ -911,13 +712,20 @@ svg {
         margin-bottom: 7%;
     }
 
+    .main-block-content-image img{
+        width: 50vw;
+    }
 
+    .footer {
+        height: 7vw;
+    }
+
+    .footer div {
+        font-size: 1.5vw;
+    }
 }
 
 @media(max-width: 700px) {
-    .roadmap-items {
-        flex-basis: 80%;
-    }
 
     .roadmap-block div {
         font-size: 2vw;
@@ -932,7 +740,7 @@ svg {
     }
 
     .faq-items {
-        flex-basis: 80%;
+        flex-basis: 70%;
     }
 
     .faq-block .faq-block-header {
@@ -947,24 +755,9 @@ svg {
         font-size: 1.7vw;
     }
 
-    .about-header h1 {
-        font-size: 3.5vw;
-    }
 }
 
 @media(max-width: 600px) {
-    .main-block-content-text #main {
-        font-size: 31px;
-    }
-
-    .main-block-content-text #submain {
-        font-size: 15px;
-    }
-
-    .main-block-content-image img{
-        width: 75%;
-    }
-
     #gooey-button {
         font-size: 1.5rem;
     }
@@ -977,21 +770,29 @@ svg {
         font-size: 3.3vw;
     }
 
-
-}
-
-@media(max-width: 500px) {
     .main-block-content-text #main {
-        font-size: 25px;
+        font-size: 3.5vw;
     }
 
     .main-block-content-text #submain {
-        font-size: 15px;
+        font-size: 1.8vw;
     }
 
-    .main-block-content-image img{
-        width: 95%;
+    .about-header {
+        padding-top: 6vw;
+        padding-bottom: 6vw;
     }
+
+    .footer {
+        height: 8vw;
+    }
+
+    .footer div {
+        font-size: 1.6vw;
+    }
+}
+
+@media(max-width: 500px) {
 
     .roadmap-block div {
         font-size: 2.5vw;
@@ -1001,48 +802,46 @@ svg {
         font-size: 3.75vw;
     }
 
-    .roadmap-block {
-        margin-bottom: 40px;
-    }
-
-    .roadmap-block {
-        margin-bottom: 40px;
-    }
-
     #roadmapHeader {
         padding-bottom: 40px;
     }
 
     .about-header h1 {
-        font-size: 4.5vw;
+        font-size: 5vw;
+    }
+
+    .main-block-content-text #main {
+        font-size: 6vw;
+    }
+
+    .main-block-content-text #submain {
+        font-size: 3vw;
+    }
+
+    .main-block-content-image img{
+        width: 60vw;
+    }
+
+    .footer {
+        height: 9vw;
+    }
+
+    .footer div {
+        font-size: 1.7vw;
     }
 
 }
 
 @media(max-width: 400px) {
     .main-block-content-text #main {
-        font-size: 23px;
+        font-size: 6.5vw;
     }
 
     .main-block-content-text #submain {
-        font-size: 15px;
-    }
-
-    .main-block-content-image{
-        width: 85%;
-        margin: 0;
+        font-size: 3.5vw;
     }
 
     .main-block-content-image img{
-        width: 100%;
+        width: 60vw;
     }
-
-    #gooey-button {
-        transform: translateX(-50%) scale(0.5);
-    }
-
-    .main-block-content-text {
-        flex-basis: 80%;
-    }
-
 }

@@ -15,10 +15,11 @@
      <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Outfit:wght@100;400;900&family=Quicksand:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="keyframes.css">
 </head>
 <body>
     <div class="loading-screen">
-        <div class="loading-screen-image" style="display:none;"><img src="images/image-loading1.png" alt=""></div>
+        <div class="loading-screen-image" style="display:none;"><img src="images/image-loading1.gif" alt=""></div>
         <div class="loading-screen-text" style="display:none;">NewYearTrees NFT</div>
     </div>
 
@@ -34,24 +35,24 @@
             </div>
 
             <div class="navbar-hide">
-                <div class="item"><a href="https://twitter.com/NewYearTrees" target="_blank"><img src="images/twitter-logo.png" alt="" style="height: 23px; padding-top: 5px;"></a></div>
-                <div class="item"><a href="https://discord.gg/NnhNfuMAPg" target="_blank"><img src="images/discord-logo.png" alt="" style="height: 20px;"></a></div>
+                <div class="item"><a href="https://twitter.com/NewYearTrees" target="_blank"><img src="images/twitter-logo.gif" alt="" style="height: 23px; padding-top: 5px;"></a></div>
+                <div class="item"><a href="https://discord.gg/NnhNfuMAPg" target="_blank"><img src="images/discord-logo.gif" alt="" style="height: 20px;"></a></div>
             </div>
 
             <div class="hamburger hamburger-cross" style="display: none">
-                <div class="item"><a><img src="images/hamburger.png" alt="" style="height: 20px; padding-top: 10px;"></a></div>
+                <div class="item"><a><img src="images/hamburger.gif" alt="" style="height: 20px; padding-top: 10px;"></a></div>
             </div>
 
         </nav>
 
         <div class="toogle-block" style="text-align: center; display: none">
             <div class="toogle-block-content">
-                <div class="item toogle-menu-items"><a href="#about">About</a></div>
-                <div class="item toogle-menu-items"><a href="#roadmap">Roadmap</a></div>
-                <div class="item toogle-menu-items"><a href="#faq">FAQ</a></div>
+                <div class="item toogle-menu-items"><a href="#about" class="toogle-item">About</a></div>
+                <div class="item toogle-menu-items"><a href="#roadmap" class="toogle-item">Roadmap</a></div>
+                <div class="item toogle-menu-items"><a href="#faq" class="toogle-item">FAQ</a></div>
                 <div class="toogle-block-content-icons">
-                    <div class="item"><a href="https://twitter.com/NewYearTrees" target="_blank"><img src="images/twitter-logo.png" alt="" style="height: 25px; padding-top: 5px;"></a></div>
-                    <div class="item"><a href="https://discord.gg/NnhNfuMAPg" target="_blank"><img src="images/discord-logo.png" alt="" style="width: 27px; height: auto;"></a></div>
+                    <div class="item"><a href="https://twitter.com/NewYearTrees" target="_blank"><img src="images/twitter-logo.gif" alt="" style="height: 25px; padding-top: 5px;"></a></div>
+                    <div class="item"><a href="https://discord.gg/NnhNfuMAPg" target="_blank"><img src="images/discord-logo.gif" alt="" style="width: 27px; height: auto;"></a></div>
                 </div>
             </div>
         </div>
@@ -60,41 +61,39 @@
             <div class="main-block-content-text">
                 <div id="main">Welcome to NewYearTrees NFTs</div>
                 <div id="submain">The future of NFT trees</div>
-                <div id="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-                            <defs>
-                                <filter id="gooey">
-                                    <!-- in="sourceGraphic" -->
-                                    <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
-                                    <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
-                                    <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
-                                </filter>
-                            </defs>
-                        </svg>
-
-                        <button id="gooey-button">
-                            <a>Join discord</a>
-                            <span class="bubbles">
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                                <span class="bubble"></span>
-                            </span>
-                        </button>
-                </div>
             </div>
+
             <div class="main-block-content-image">
-                <img src="images/main_image.gif" alt="">
+                <img src="images/main.gif" alt="">
             </div>
-<!--            <div class="main-block-content-mint">-->
 
-<!--            </div>-->
+            <div id="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+                        <defs>
+                            <filter id="gooey">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                                <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+                            </filter>
+                        </defs>
+                    </svg>
+
+                    <button id="gooey-button">
+                        Join discord
+                        <span class="bubbles">
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                        </span>
+                    </button>
+            </div>
 
         </div>
 
@@ -282,7 +281,7 @@
 
             <div class="faq-block">
                 <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_9" data-button="#faqButton_9">
-                    <div class="faq-block-header" style="flex-grow: 1">09 - Which marketplaces will NewYearTrees NFTs be on?</div>
+                    <div class="faq-block-header" style="flex-grow: 1">09 - Which marketplaces will you be on?</div>
                     <div class="faq-block-opener" id="faqButton_9">+</div>
                 </div>
                 <div class="faq-block-hidden" id="faqBlockHidden_9" style="display: none">
