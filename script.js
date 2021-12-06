@@ -1,6 +1,10 @@
 $(window).on("load", function() {
+    $("html, body").addClass("overflow-hidden")
     $(".loading-screen div").fadeIn(3000)
     $(".loading-screen").delay(3000).slideUp(1500)
+    setTimeout(function(){
+         $("html, body").removeClass("overflow-hidden")
+    },4500);
 })
 
 function menuToggle() {
