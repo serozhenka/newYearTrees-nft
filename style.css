@@ -70,6 +70,11 @@
     text-align: center;
 }
 
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
 .item:hover {
     opacity: 0.5;
     transform: scale(0.95);
@@ -204,7 +209,7 @@
     padding-top: 40px;
     padding-bottom: 35px;
     flex-basis: 100%;
-    height: 7vh;
+    height: 8vh;
 }
 
 .about-header h1 {
@@ -282,12 +287,17 @@ svg {
     font-size: 2rem;
     border: none;
     border-radius: 10px;
-    color: #C39BD3;
     filter: url("#gooey");
     position: relative;
     background-color: #A170B5;
-    text-shadow: 1px 1px 2px #482064;
     transition: .5s;
+}
+
+#gooey-button a{
+    color: #C39BD3;
+    text-shadow: 1px 1px 2px #482064;
+    text-decoration: none;
+    width: 100%;
 }
 
 #gooey-button:focus {
@@ -313,6 +323,9 @@ svg {
 
 #gooey-button:hover {
     background-color: #C39BD3;
+}
+
+#gooey-button:hover a {
     color: #9A67AF;
 }
 
@@ -584,6 +597,95 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
     border-radius: 15px;
 }
 
+.faq {
+    width: 100%;
+    background-color: #05010A;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+    padding-top: 40px;
+}
+
+.faq-items {
+    flex-basis: 60%;
+}
+
+.faq-block {
+    flex-basis: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    padding: 2%;
+}
+
+.faq-block .faq-block-header {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 3.5vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient 2s linear infinite;
+    filter: drop-shadow(2px 2px 2px #482064);
+}
+
+.faq-block-main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-block-opener {
+    font-size: 4vh;
+    transition: .3s;
+}
+
+.faq-block-opener:hover {
+    color: gray;
+}
+
+
+.faq-block-hidden {
+    padding: 15px 0;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.3vh;
+    letter-spacing: calc(0.5px);
+    filter: drop-shadow(2px 2px 15px #482064);
+    line-height: 1.6;
+}
+
+.transform-rotate-45deg {
+    transform: rotate(45deg);
+}
+
+.footer {
+    height: 10vh;
+    background-color: rgba(8, 4, 18, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15%;
+}
+
+.footer div {
+    padding: 15px 0;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2.3vh;
+    letter-spacing: calc(0.5px);
+    filter: drop-shadow(2px 2px 15px #482064);
+}
 
 /* MEDIA QUERY*/
 
@@ -712,6 +814,10 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
     .main-block-content-image img{
         width: 90%;
     }
+
+    .faq-items {
+        flex-basis: 70%;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -776,6 +882,13 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
         font-size: 2.7vw;
     }
 
+    .faq-block .faq-block-header {
+        font-size: 3vh;
+    }
+
+    .faq-block-hidden {
+        font-size: 1.8vh;
+    }
 }
 
 @media(max-width: 800px) {
@@ -794,6 +907,10 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
     .progress-container {
         margin-bottom: 7%;
     }
+
+    .faq-block .faq-block-header {
+        font-size: 2.5vh;
+    }
 }
 
 @media(max-width: 700px) {
@@ -807,6 +924,14 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
 
     .roadmap-block h3 {
         font-size: 3vw;
+    }
+
+    .faq-items {
+        flex-basis: 80%;
+    }
+
+    .faq {
+        padding-top: 0;
     }
 }
 
@@ -833,6 +958,22 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
 
     .roadmap-block h3 {
         font-size: 3.3vw;
+    }
+
+    .faq-block .faq-block-header {
+        font-size: 2vh;
+    }
+
+    .faq-block-hidden {
+        font-size: 1.4vh;
+    }
+
+    .faq-header h1 {
+        font-size: 4vh;
+    }
+
+    .faq-block-opener {
+        font-size: 3vh;
     }
 }
 
@@ -868,6 +1009,27 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
     #roadmapHeader {
         padding-bottom: 40px;
     }
+
+    .faq-block .faq-block-header {
+        font-size: 1.5vh;
+    }
+
+    .faq-block-hidden {
+        font-size: 1vh;
+    }
+
+    .faq-header h1 {
+        font-size: 3.2vh;
+    }
+
+    .faq-header {
+        height: 5vh;
+        padding-top: 20px;
+    }
+
+    .faq-block-opener {
+        font-size: 2vh;
+    }
 }
 
 @media(max-width: 400px) {
@@ -896,4 +1058,15 @@ background-image: linear-gradient(180deg, #cc79c5 46%, #FFCC70 100%);
         flex-basis: 80%;
     }
 
+    .faq-header h1 {
+        font-size: 2.5vh;
+    }
+
+    .faq-block .faq-block-header {
+        font-size: 1.2vh;
+    }
+
+    .faq-block-hidden {
+        font-size: 0.8vh;
+    }
 }

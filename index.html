@@ -28,14 +28,14 @@
                 <div class="logo" style=" flex-grow: 1"><a>New Year Trees</a></div>
             </div>
             <div class="navbar-hide" style="text-align: center;">
-                <div class="item"><a>About</a></div>
-                <div class="item"><a>Roadmap</a></div>
-                <div class="item"><a>FAQ</a></div>
+                <div class="item main-menu-items"><a href="#about">About</a></div>
+                <div class="item main-menu-items"><a href="#roadmap">Roadmap</a></div>
+                <div class="item main-menu-items"><a href="#faq">FAQ</a></div>
             </div>
 
             <div class="navbar-hide">
-                <div class="item"><a><img src="images/twitter-logo.png" alt="" style="height: 23px; padding-top: 5px;"></a></div>
-                <div class="item"><a><img src="images/discord-logo.png" alt="" style="height: 20px;"></a></div>
+                <div class="item"><a href="https://twitter.com/NewYearTrees" target="_blank"><img src="images/twitter-logo.png" alt="" style="height: 23px; padding-top: 5px;"></a></div>
+                <div class="item"><a href="https://discord.gg/NnhNfuMAPg" target="_blank"><img src="images/discord-logo.png" alt="" style="height: 20px;"></a></div>
             </div>
 
             <div class="hamburger hamburger-cross" style="display: none">
@@ -46,12 +46,12 @@
 
         <div class="toogle-block" style="text-align: center; display: none">
             <div class="toogle-block-content">
-                <div class="item"><a>About</a></div>
-                <div class="item"><a>Roadmap</a></div>
-                <div class="item"><a>FAQ</a></div>
+                <div class="item toogle-menu-items"><a href="#about">About</a></div>
+                <div class="item toogle-menu-items"><a href="#roadmap">Roadmap</a></div>
+                <div class="item toogle-menu-items"><a href="#faq">FAQ</a></div>
                 <div class="toogle-block-content-icons">
-                    <div class="item"><a><img src="images/twitter-logo.png" alt="" style="height: 25px; padding-top: 5px;"></a></div>
-                    <div class="item"><a><img src="images/discord-logo.png" alt="" style="width: 27px; height: auto;"></a></div>
+                    <div class="item"><a href="https://twitter.com/NewYearTrees" target="_blank"><img src="images/twitter-logo.png" alt="" style="height: 25px; padding-top: 5px;"></a></div>
+                    <div class="item"><a href="https://discord.gg/NnhNfuMAPg" target="_blank"><img src="images/discord-logo.png" alt="" style="width: 27px; height: auto;"></a></div>
                 </div>
             </div>
         </div>
@@ -73,7 +73,7 @@
                         </svg>
 
                         <button id="gooey-button">
-                            Join discord
+                            <a>Join discord</a>
                             <span class="bubbles">
                                 <span class="bubble"></span>
                                 <span class="bubble"></span>
@@ -101,7 +101,7 @@
     </div>
 
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="about-header"><h1>ABOUT</h1></div>
 
         <div class="about-text">
@@ -123,7 +123,7 @@
         <div class="about-image"><img src="images/sneak_peak_about.gif" alt=""></div>
     </div>
 
-    <div class="roadmap">
+    <div class="roadmap" id="roadmap">
         <div class="about-header" id="roadmapHeader"><h1>ROADMAP</h1></div>
         <div class="roadmap-items" id="roadmapItems">
             <div class="roadmap-block">
@@ -180,58 +180,129 @@
 
 
 
-    <div class="roadmap">
-
-
-        <div class="roadmap-items">
-            <div class="roadmap-block">
-                <h3>0% - PRE-LAUNCH</h3>
-                <div>
-                    → NewYearTrees NFTs and metadata generation<br>
-                    → Website, Twitter, and Discord server launches<br>
-                    → 100 NewYearTrees NFTs presale<br>
+    <div class="faq" id="faq">
+        <div class="about-header faq-header" id="faqHeader"><h1>FREQUENTLY ASKED QUESTIONS</h1></div>
+        <div class="faq-items" id="faqItems">
+            <div class="faq-block" style="border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_1" data-button="#faqButton_1">
+                    <div class="faq-block-header" style="flex-grow: 1">01 - What are NewYearTrees NFTs?</div>
+                    <div class="faq-block-opener" id="faqButton_1">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_1" style="display: none">
+                    NewYearTrees NFTs are a collection of 1000 all unique Christmas Trees stored on the Solana blockchain.
+                    Each NFT is generated randomly from over 70 different traits.
                 </div>
             </div>
 
-            <div class="roadmap-block">
-                <h3>25% - LAUNCH</h3>
-                <div>
-                    → Secondary Marketplaces acceptation<br>
-                    → 900 NewYearTrees NFTs are available to mint<br>
-                    → Secondary Marketplaces listing<br>
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_2" data-button="#faqButton_2">
+                    <div class="faq-block-header" style="flex-grow: 1">02 - Why do I need NewYearTrees NFT?</div>
+                    <div class="faq-block-opener" id="faqButton_2">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_2" style="display: none">
+                    Besides allowing you to show off your NFTs to one and all, it’s also a great New Year or Christmas
+                    gift to your friends. All holders of NewYearTrees NFTs own the full rights to their NFTs, and
+                    long-term holders will benefit from future rewards and additional NFT drops.
                 </div>
             </div>
 
-            <div class="roadmap-block">
-                <h3>50% - CHARITY, GIVEAWAYS AND MERCH</h3>
-                <div>
-                    → All the royalty money donated on charity<br>
-                    → A giveaway among most loyal NewYearTrees NFTs holders<br>
-                    → Merch store creation with exclusive clothes and other stuff<br>
-                    → Merch giveaway to most loyal holders<br>
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_3" data-button="#faqButton_3">
+                    <div class="faq-block-header" style="flex-grow: 1">03 - How are NewYearTrees NFT distributed?</div>
+                    <div class="faq-block-opener" id="faqButton_3">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_3" style="display: none">
+                    In general 1000 + 77 NFTs were created.<br><br>
+
+                    → 100 are reserved and allocated for presale.<br>
+                    → 900 will be available in the main sale for the mint price.<br>
+                    → 77 most legendary NFTs are reserved for future distribution for most active and loyal
+                    holders. They can’t be minted or purchased in any way.
+
                 </div>
             </div>
 
-            <div class="roadmap-block">
-                <h3>75% - LEGENDARY DISTRIBUTION</h3>
-                <div>
-                    → 77 most Legendary NFTs are distributed to the most loyal holders<br>
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_4" data-button="#faqButton_4">
+                    <div class="faq-block-header" style="flex-grow: 1">04 - What is the minting price?</div>
+                    <div class="faq-block-opener" id="faqButton_4">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_4" style="display: none">
+                    As we offer a Fair Launch Protocol (FLP) launch each NewYearTrees NFT will cost from 0.5 SOL to 1 SOL
+                    + GAS (additional transaction fee which is about 0.01 SOL) to mint.
                 </div>
             </div>
 
-            <div class="roadmap-block">
-                <h3>100% - FUTURE TRAJECTORY</h3>
-                <div>
-                    → To be discussed with community members<br>
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_5" data-button="#faqButton_5">
+                    <div class="faq-block-header" style="flex-grow: 1">05 - Mint date</div>
+                    <div class="faq-block-opener" id="faqButton_5">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_5" style="display: none">
+                    NewYearTrees NFTs can be minted from our website on 25 December from 9 pm UTC onwards until all are distributed.
                 </div>
             </div>
 
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_6" data-button="#faqButton_6">
+                    <div class="faq-block-header" style="flex-grow: 1">06 - How many NewYearTrees NFTs can I buy?</div>
+                    <div class="faq-block-opener" id="faqButton_6">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_6" style="display: none">
+                    Unlimited NewYearTrees NFTs can be minted per address but only one per transaction.
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_7" data-button="#faqButton_7">
+                    <div class="faq-block-header" style="flex-grow: 1">07 - Presale</div>
+                    <div class="faq-block-opener" id="faqButton_7">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_7" style="display: none">
+                    Our team has a strong will to expand our community hence we decided to make a 100 NewYearTrees NFT presale.
+                    We will officially announce the date few days before presale. This will cost you about 0.5 SOL,
+                    unlike main mint where mint price will be higher.
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_8" data-button="#faqButton_8">
+                    <div class="faq-block-header" style="flex-grow: 1">08 - Rarity</div>
+                    <div class="faq-block-opener" id="faqButton_8">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_8" style="display: none">
+                    There are different types of NewYearTrees with over 70 different attributes, such as Christmas
+                    Tree Color, Backgrounds, Presents, Decorations, Lights, and others.
+                    <br><br>
+                    Some attributes are rarer than others. Minting is fully random, and we can’t anyhow control that process.
+                    A full rarity chart will be released once the public mint has ended.
+
+                </div>
+            </div>
+
+            <div class="faq-block">
+                <div class="faq-block-main faqBlockOpener" data-target="#faqBlockHidden_9" data-button="#faqButton_9">
+                    <div class="faq-block-header" style="flex-grow: 1">09 - Which marketplaces will NewYearTrees NFTs be on?</div>
+                    <div class="faq-block-opener" id="faqButton_9">+</div>
+                </div>
+                <div class="faq-block-hidden" id="faqBlockHidden_9" style="display: none">
+                    We have already applied and are currently waiting for the response from Solana Art.
+                    More marketplaces will follow soon after.
+
+                </div>
+            </div>
         </div>
 
     </div>
 
+    <div class="footer">
+        <div>© 2021 New Year Trees | All Rights Reserved</div>
+        <div>Terms and conditions</div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 </html>
