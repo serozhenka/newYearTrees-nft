@@ -41,6 +41,10 @@ function menuToggle() {
 }
 
 $(document).ready(function() {
+    if ($(window).width() < 1000) {
+        $("#bubbles").addClass('display');
+    }
+
 
     $hamburger.on("click", function() {
         menuToggle()

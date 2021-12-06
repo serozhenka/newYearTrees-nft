@@ -7,6 +7,10 @@
     overflow: hidden;
 }
 
+.display {
+    display: none;
+}
+
 ::-webkit-scrollbar {
     width: 0;
 }
