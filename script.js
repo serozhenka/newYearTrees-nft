@@ -65,7 +65,7 @@ $(document).ready(function() {
            $element.style.height = 100 + "%";
         }
 
-        if (scrolled >= 100 && scrolled <= 110) {
+        if (scrolled >= 100 && scrolled <= 110 && $(window).width() > 1000) {
             if (confettiAppear) {
                 confetti({
                     particleCount: 50,
