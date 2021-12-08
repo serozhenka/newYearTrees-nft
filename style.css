@@ -142,7 +142,6 @@
 }
 
 .main-block-content-text {
-    display: inline;
     flex-basis: 50%;
     font-family: 'Outfit', sans-serif;
     font-weight: 600;
@@ -633,7 +632,7 @@ svg {
 @media(max-width: 900px) {
     .main-block-content-text {
         flex-basis: 80%;
-        align-self: end;
+        align-self: flex-end;
     }
 
     .main-block-content-image {
